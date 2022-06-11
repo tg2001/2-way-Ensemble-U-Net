@@ -14,17 +14,23 @@ from Dataset.preprocessing import reduce_2d, flip, blur
 def split_dataset(input_mri, output_mri, s):
   input_mri = np.array(input_mri, dtype=np.uint8)
   output_mri = np.array(output_mri, dtype=np.uint8)
-
-  # Splitting up the dataset into training and testing set
-  X_train, X_test, y_train, y_test = train_test_split(input_mri, output_mri, test_size=s, random_state=38)
-
-  del input_mri, output_mri
-
-  # Normalising the input to the range 0 to 2
-  X_train = np.array(X_train/128, dtype=np.float16)
-  X_test = np.array(X_test/128, dtype=np.float16)
-
-  return X_train, X_test, y_train, y_test
+  
+  if s==0:
+    # Normalising the input to the range 0 to 2
+    input_mri = np.array(input_mri/128, dtype=np.float16)
+    return input_mri, output_mri
+  
+  else:  
+    # Splitting up the dataset into training and testing set
+    X_train, X_test, y_train, y_test = train_test_split(input_mri, output_mri, test_size=s, random_state=38)
+    
+    del input_mri, output_mri
+    
+    # Normalising the input to the range 0 to 2
+    X_train = np.array(X_train/128, dtype=np.float16)
+    X_test = np.array(X_test/128, dtype=np.float16)
+    
+    return X_train, X_test, y_train, y_test
 
 
 
@@ -50,20 +56,20 @@ def create_dataset(path1, path2, n=40, s=0.05):
 
   # path1 is the folder containing the input for the model
   # path2 is the folder containing the segmented outputs
-  
-  try:
-    if not path1[-1]=='/':
-      path1 = path1+'/'
-    
-    if not path2[-1]=='/':
-      path2 = path2+'/'
-    
-    l = os.listdir(path2)     # checking if the path exists
-    l = os.listdir(path1)     # storing the file names of the input MRI folder
-   
-  except:
-    print('Invalid input for path1 or path2')
-    return
+
+#   try:
+  if not path1[-1]=='/':
+    path1 = path1+'/'
+
+  if not path2[-1]=='/':
+    path2 = path2+'/'
+
+#     l = os.listdir(path2)     # checking if the path exists
+  l = os.listdir(path1)     # storing the file names of the input MRI folder
+
+#   except:
+#     print('Invalid input for path1 or path2')
+#     return
   
   # non_blur list consists of the first 7 characters of those mri file's names, which are not suitable for blurring
   non_blur = ['sub-009', 'sub-005', 'sub-008', 'sub-007', 'sub-004', 'sub-002', 'sub-015', 'sub-023', 'sub-016', 'sub-017', 'sub-022', 'sub-021', 'sub-020', 'sub-062', 'sub-071', 'sub-078']
@@ -178,10 +184,10 @@ def create_dataset(path1, path2, n=40, s=0.05):
   del data1, data2, d1, d2
   del data10, data20, data11, data21, data12, data22
 
-  if s==0:
-    return input_mri, output_mri
-  else:
-    return split_dataset(input_mri, output_mri, s)
+#   if s==0:
+#     return input_mri, output_mri
+#   else:
+  return split_dataset(input_mri, output_mri, s)
 
 
 
