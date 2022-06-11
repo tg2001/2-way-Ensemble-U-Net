@@ -11,12 +11,12 @@ from Dataset.preprocessing import reduce_2d, flip, blur
 
 # Function for splitting the dataset into train and test set and normalising the values
 
-def split_dataset(input_mri, output_mri):
+def split_dataset(input_mri, output_mri, s):
   input_mri = np.array(input_mri, dtype=np.uint8)
   output_mri = np.array(output_mri, dtype=np.uint8)
 
   # Splitting up the dataset into training and testing set
-  X_train, X_test, y_train, y_test = train_test_split(input_mri, output_mri, test_size=0.05, random_state=38)
+  X_train, X_test, y_train, y_test = train_test_split(input_mri, output_mri, test_size=s, random_state=38)
 
   del input_mri, output_mri
 
