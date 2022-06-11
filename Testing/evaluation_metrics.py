@@ -1,3 +1,6 @@
+import numpy as np
+
+
 # Jaccard similarity for checking the performance of the model
 
 def jaccard(tp, fp, fn):      # same as iou
