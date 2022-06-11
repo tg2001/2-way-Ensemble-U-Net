@@ -4,7 +4,7 @@ import nibabel as nib
 
 from ipywidgets import interact, interactive, fixed, AppLayout
 import matplotlib.pyplot as plt
-%matplotlib inline
+# %matplotlib inline
 
 
 
