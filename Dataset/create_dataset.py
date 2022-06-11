@@ -3,7 +3,7 @@ import os
 import nibabel as nib
 
 from sklearn.model_selection import train_test_split
-import .preprocessing
+from Dataset.preprocessing import reduce_2d, flip, blur
 
 
 
@@ -48,10 +48,23 @@ def split_dataset(input_mri, output_mri):
 
 def create_dataset(path1, path2, n=40, s=0.05):
 
-  # path1 = '/content/drive/MyDrive/feta_2.1/feta_2.1/nii_files_input/'     # Folder containing the input MRI for the model
-  # path2 = '/content/drive/MyDrive/feta_2.1/feta_2.1/nii_files_output/'    # Folder containing the segmented outputs
-  l = os.listdir(path1)       # storing the file names of the input MRI folder
-
+  # path1 is the folder containing the input for the model
+  # path2 is the folder containing the segmented outputs
+  
+  try:
+    if not path1[-1]=='/':
+      path1 = path1+'/'
+    
+    if not path2[-1]=='/':
+      path2 = path2+'/'
+    
+    l = os.listdir(path2)     # checking if the path exists
+    l = os.listdir(path1)     # storing the file names of the input MRI folder
+   
+  except:
+    print('Invalid input for path1 or path2')
+    return
+  
   # non_blur list consists of the first 7 characters of those mri file's names, which are not suitable for blurring
   non_blur = ['sub-009', 'sub-005', 'sub-008', 'sub-007', 'sub-004', 'sub-002', 'sub-015', 'sub-023', 'sub-016', 'sub-017', 'sub-022', 'sub-021', 'sub-020', 'sub-062', 'sub-071', 'sub-078']
 
