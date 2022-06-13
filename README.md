@@ -28,3 +28,13 @@ A sample input and its corresponding output is of the following form:
 
 ![download](https://user-images.githubusercontent.com/89569287/173315387-8a11dc43-d041-48f2-b0c6-9b0fa12c4047.png)
 ![download (1)](https://user-images.githubusercontent.com/89569287/173315401-da47764e-0a79-4535-888f-a7133d5f6ee0.png)
+
+Libraries used in this this repository:
+- Numpy
+- Opencv
+- os
+- Scikit-Learn
+- Tensorflow 2
+- Nibabel
+- Matplotlib
+- Ipywidget (required for visualization of 3D volumes; can only be used in Ipython notebooks)
