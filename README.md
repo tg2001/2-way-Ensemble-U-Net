@@ -4,7 +4,7 @@ This is the repository for the following paper: Fetal Brain Component Segmentati
 
 This paper is for segmenting the fetal brain into its seven major components: Intracranial space and extra-axial CSF spaces, Gray matter, White matter, Ventricles, Cerebellum, Deep gray matter and the Brainstem and spinal cord.
 
-We have used the FeTA 2.1 (Fetal Tissue Annotation) Dataset for the purpose of training and testing our models. The dataset can be downloaded from this [link](https://zenodo.org/record/4541606#.Yqb6HHVBw_A) after agreeing to the terms and conditions
+We have used the FeTA 2.1 (Fetal Tissue Annotation) Dataset for the purpose of training and testing our models. The dataset can be downloaded from this website: [link](https://zenodo.org/record/4541606#.Yqb6HHVBw_A); after agreeing to the terms and conditions.
 
 The repository contains the following folders:
 - Dataset: Contains code for creating the dataset
@@ -18,11 +18,11 @@ We have used Google Colaboratory for all the tasks.
 
 The input to our model should be of the shape (256x256)
 
-The model files and saved weights are uploaded in the this [link](https://drive.google.com/drive/folders/1lrWgQZ1xFyEwumqrg6-jWu16GA1yCWRp?usp=sharing)
+The model files and saved weights are uploaded in this [google drive link](https://drive.google.com/drive/folders/1lrWgQZ1xFyEwumqrg6-jWu16GA1yCWRp?usp=sharing).
 
 The model will output the segmentation of the shape (256x256x8), returning the probability of a pixel to be in each of the 8 classes: the seven brain components and the background; which is post-processed to return it in the required form.
 
-We have also created a demo on how to use these modules for creating a dataset, visualising it, testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing)
+We have also created a demo colab file on how to use these modules for creating a dataset, visualising it, testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing).
 
 A sample input and its corresponding output is of the following form:
 
