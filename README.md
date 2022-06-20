@@ -9,7 +9,7 @@ We have used the FeTA 2.1 (Fetal Tissue Annotation) Dataset for the purpose of t
 The repository contains the following folders:
 - Dataset: Contains code for creating the dataset
 - Testing: Contains code for using the model for performing segmentation and also for testing the performance of the models
-- visualisation: Contains code for visualising the dataset
+- Visualisation: Contains code for visualising the dataset
 - Models: Contains the code for the 7 models we tested out
 
 (Information the codes and how to use them are uploaded in the readme file of their respective folders)
@@ -32,9 +32,11 @@ A sample input and its corresponding output is of the following form:
 Libraries used in this this repository:
 - Numpy
 - Opencv
-- os
+- OS
 - Scikit-Learn
 - Tensorflow 2
 - Nibabel
+- Time
+- Tqdm
 - Matplotlib
 - Ipywidget (required for visualization of 3D volumes; can only be used in Ipython notebooks)
