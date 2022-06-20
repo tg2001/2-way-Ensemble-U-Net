@@ -1,5 +1,7 @@
 import numpy as np
 from Testing.evaluation_metrics import *
+from tqdm import tqdm
+import time
 
 
 
@@ -163,7 +165,7 @@ def pred_and_eval(model, X_test, y_test=[], all=0):
   new_out = []
   num = len(X_test)   # number of test cases
 
-  for k in range(num):
+  for k in tqdm(range(num), desc="Executing", ncols=75):
     output = model.predict(X_test[k].reshape(1, 256, 256))
 
     if list(y_test):
@@ -189,12 +191,12 @@ def pred_and_eval(model, X_test, y_test=[], all=0):
       jac_list.append(jac)
       sens_list.append(sens)
 
+  print()
   if not list(y_test):
     return new_out
 
   elif num==1:                          # For num = 1, the metric values will be displayed directly, 
                                         # instead of the mean and SD, since they store only a single value
-
     print('Metric values are: ')
     
     print(prec_list[0])
