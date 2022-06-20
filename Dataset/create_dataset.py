@@ -1,6 +1,8 @@
 import numpy as np
 import os
 import nibabel as nib
+import time
+from tqdm import tqdm
 
 from sklearn.model_selection import train_test_split
 from Dataset.preprocessing import reduce_2d, flip, blur
@@ -66,6 +68,7 @@ def create_dataset(path1, path2, n=40, s=0.05):
 
 #     l = os.listdir(path2)     # checking if the path exists
   l = os.listdir(path1)     # storing the file names of the input MRI folder
+  num = len(l)
 
 #   except:
 #     print('Invalid input for path1 or path2')
@@ -77,7 +80,7 @@ def create_dataset(path1, path2, n=40, s=0.05):
   input_mri = []
   output_mri = []
 
-  for i in range(80):
+  for i in tqdm(range(num), desc="Executing", ncols=75):
     
     f1 = l[i]                      # Getting one input mri file in each iteration
     f2 = f1[:-10]+'dseg'+f1[-7:]    # Getting the corresponding segmented output file
@@ -184,9 +187,6 @@ def create_dataset(path1, path2, n=40, s=0.05):
   del data1, data2, d1, d2
   del data10, data20, data11, data21, data12, data22
 
-#   if s==0:
-#     return input_mri, output_mri
-#   else:
   return split_dataset(input_mri, output_mri, s)
 
 
