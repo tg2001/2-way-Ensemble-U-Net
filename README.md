@@ -16,11 +16,11 @@ The repository contains the following folders:
 
 We have used Google Colaboratory for all the tasks.
 
-The input to our model should be of the shape (256x256)
+The input to our model is a 3D array, containing all the 2D images that should be given to the model. Each image is of the shape (256x256).
 
 The model files and saved weights are uploaded in this [google drive link](https://drive.google.com/drive/folders/1lrWgQZ1xFyEwumqrg6-jWu16GA1yCWRp?usp=sharing).
 
-The model will output the segmentation of the shape (256x256x8), returning the probability of a pixel to be in each of the 8 classes: the seven brain components and the background; which is post-processed to return it in the required form.
+The model will output the segmentation of the shape (256x256x8) for each image (thus returning a 4D array for all the images of the input), giving the probability of a pixel to be in each of the 8 classes: the seven brain components and the background; which is post-processed to return it in the required form. The final output will be a 3D array, having one segmented output image of shape (256x256) corresponding to each input image.
 
 We have also created a demo colab file on how to use these modules for creating a dataset, visualising it, testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing).
 
