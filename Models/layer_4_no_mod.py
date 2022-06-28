@@ -1,6 +1,5 @@
 from tensorflow.keras import models, layers
 
-
 def create_model(ensem=0):
 
     inp = layers.Input(shape=(256, 256, 1))
