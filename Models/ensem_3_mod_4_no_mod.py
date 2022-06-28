@@ -2,7 +2,7 @@ from tensorflow.keras import models, layers
 from Models.layer_3_mod import *
 from Models.layer_4_no_mod import *
 
-def ensem_3_4():
+def create_model():
 
   # 3 layer mod
   model1 = mod_3(1)
