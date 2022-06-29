@@ -1,14 +1,14 @@
 from tensorflow.keras import models, layers
-from Models.layer_4_mod import *
-from Models.layer_4_no_mod import *
+from Models import layer_4_mod
+from Models import layer_4_no_mod
 
 def create_model():
 
   # 4 layer mod
-  model1 = mod_4(1)
+  model1 = layer_4_mod.create_model(1)
 
   # 4 layer no mod
-  model2 = no_mod_4(1)
+  model2 = layer_4_no_mod.create_model(1)
 
   # 4 mod 4 no mod ensemble
 
