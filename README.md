@@ -22,7 +22,7 @@ The model files and saved weights are uploaded in this [google drive link](https
 
 The model will output the segmentation of the shape (256x256x8) for each image (thus returning a 4D array for all the images of the input), giving the probability of a pixel to be in each of the 8 classes: the seven brain components and the background; which is post-processed to return it in the required form. The final output will be a 3D array, having one segmented output image of shape (256x256) corresponding to each input image.
 
-We have also created a demo colab file on how to use these modules for creating a dataset, visualising it, testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing).
+We have also created a demo colab file on how to use these modules for creating a dataset, visualising it, training and testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing).
 
 A sample input and its corresponding output is of the following form:
 
