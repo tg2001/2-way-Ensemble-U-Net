@@ -42,7 +42,7 @@ Libraries used in this repository:
 - Ipywidgets (required for visualization of 3D volumes; can only be used in Ipython notebooks)
 
 
-Cite our work:
+Please cite our work:
 ```
 Halder, S., T. Gangopadhyay, P. Dasgupta, K. Chatterjee, D. Ganguly, S. Sarkar, and S. Roy. "Fetal Brain Component Segmentation using 2-way Ensemble U-Net." In Proceedings of the 7th International Conference on Data Management, Analytics and Innovation, Pune, India, pp. 1-12. 2023.
 ```
