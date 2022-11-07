@@ -1,6 +1,9 @@
 # 2-way Ensemble U-Net
 
-This is the repository for the following paper: Fetal Brain Component Segmentation using with 2-way Ensemble U-Net.
+This is the repository for the following paper: 
+```
+Fetal Brain Component Segmentation using with 2-way Ensemble U-Net
+```
 
 This paper is for segmenting the fetal brain into its seven major components: Intracranial space and extra-axial CSF spaces, Gray matter, White matter, Ventricles, Cerebellum, Deep gray matter and the Brainstem and spinal cord.
 
