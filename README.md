@@ -32,19 +32,6 @@ A sample input and its corresponding output is of the following form:
 ![download](https://user-images.githubusercontent.com/89569287/173315387-8a11dc43-d041-48f2-b0c6-9b0fa12c4047.png)
 ![download (1)](https://user-images.githubusercontent.com/89569287/173315401-da47764e-0a79-4535-888f-a7133d5f6ee0.png)
 
-Libraries used in this repository:
-- Numpy
-- Opencv
-- OS
-- Scikit-Learn
-- Tensorflow 2
-- Nibabel
-- Time
-- Tqdm
-- Matplotlib
-- Ipywidgets (required for visualization of 3D volumes; can only be used in Ipython notebooks)
-
-
 Please cite our work:
 ```
 Halder, S., T. Gangopadhyay, P. Dasgupta, K. Chatterjee, D. Ganguly, S. Sarkar, and S. Roy. "Fetal Brain Component Segmentation using 2-way Ensemble U-Net." In Proceedings of the 7th International Conference on Data Management, Analytics and Innovation, Pune, India, pp. 1-12. 2023.
