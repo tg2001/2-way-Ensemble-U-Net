@@ -27,12 +27,7 @@ The model will output the segmentation of the shape (256x256x8) for each image (
 
 We have also created a demo colab file on how to use these modules for creating a dataset, visualising it, training and testing the models and getting outputs from them. It is uploaded in this [link](https://colab.research.google.com/drive/15-JJQE5sdSatZ0WWOMIuICncn6Pi4Eny?usp=sharing).
 
-A sample input and its corresponding output is of the following form:
-
-![download](https://user-images.githubusercontent.com/89569287/173315387-8a11dc43-d041-48f2-b0c6-9b0fa12c4047.png)
-![download (1)](https://user-images.githubusercontent.com/89569287/173315401-da47764e-0a79-4535-888f-a7133d5f6ee0.png)
-
 Please cite our work:
 ```
-Halder, S., T. Gangopadhyay, P. Dasgupta, K. Chatterjee, D. Ganguly, S. Sarkar, and S. Roy. "Fetal Brain Component Segmentation using 2-way Ensemble U-Net." In Proceedings of the 7th International Conference on Data Management, Analytics and Innovation, Pune, India, pp. 1-12. 2023.
+Halder, S. et al. (2023). Fetal Brain Component Segmentation Using 2-Way Ensemble U-Net. In: Sharma, N., Goje, A., Chakrabarti, A., Bruckstein, A.M. (eds) Data Management, Analytics and Innovation. ICDMAI 2023. Lecture Notes in Networks and Systems, vol 662. Springer, Singapore. https://doi.org/10.1007/978-981-99-1414-2_28
 ```
